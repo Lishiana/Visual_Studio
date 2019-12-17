@@ -13,7 +13,7 @@ int main()
 {
 	PrintIntro();
 	PlayGame();
-	AskToPlayAgain();
+	cout << AskToPlayAgain();
 	return 0; // exit the application
 } 
 
