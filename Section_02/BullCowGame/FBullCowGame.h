@@ -1,16 +1,20 @@
 #pragma once
 #include <string>
 
+using FString = std::string;
+using int32 = int;
+
 class FBullCowGame {
 public:
 	FBullCowGame(); // constructor
 
-	int GetMaxTries() const;
-	int GetCurrentTry() const;
+	int32 GetMaxTries() const;
+	int32 GetCurrentTry() const;
 	bool IsGameWon() const;
 
-void Reset(); // TODO make a more rich return value
-	bool CheckGuessValidity(std::string); // tODO make a more rich return later
+    void Reset(); // TODO make a more rich return value
+	bool CheckGuessValidity(FString); // TODO make a more rich return later
+	// provide a method for counting bows and cows, and increasing turn #
 
 
 
@@ -18,7 +22,7 @@ void Reset(); // TODO make a more rich return value
 
 // ^^ Please try and ignore this and focus on the interface above ^^
 private:
-	int MyCurrentTry = 1;
-	int MyMaxTries = 5;
-
+	// see constructor for initialisation
+	int32 MyCurrentTry;
+	int32 MyMaxTries;
 };
